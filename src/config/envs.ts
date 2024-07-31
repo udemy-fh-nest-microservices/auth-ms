@@ -4,12 +4,14 @@ import 'dotenv/config';
 interface EnvironmentVariables {
   PORT: number;
   NATS_SERVERS: string[];
+  JWT_SECRET: string;
 }
 
 const envSchema = j
   .object({
     PORT: j.number().required(),
     NATS_SERVERS: j.array().items(j.string().required()).required(),
+    JWT_SECRET: j.string().required(),
   })
   .unknown();
 

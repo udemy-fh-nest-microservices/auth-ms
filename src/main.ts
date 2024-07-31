@@ -22,7 +22,7 @@ async function bootstrap() {
     }),
   );
 
-  const logger = new Logger('Orders Microservice');
+  const logger = new Logger('Auth Microservice');
 
   await app.listen();
 
